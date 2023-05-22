@@ -1,0 +1,96 @@
+
+* {
+  font-family: monospace;
+  /*font-weight: bold;*/
+  margin: 0;
+  padding: 0;
+}
+  
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(200px, auto) repeat(5, 100px);
+}
+
+.grid-container > .keys {
+  display: grid;
+  align-content: stretch;
+  min-height: 503px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(100px) repeat(5, 100px);
+  padding: 0 400px 0 0;
+  background-color: rgb(10, 144, 161);
+}
+
+  
+.grid-container > .keys > button {
+  cursor: pointer;
+  font-size: 40px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+}
+  
+.grid-container > .keys > button:hover:active {
+  background-color: rgba(255, 255, 255, 0.137);
+  color: #ffff;
+  font-size: 36px;
+  border-radius: 50px;
+}
+  
+.grid-container > .keys > .operator {
+  background: none;
+  color: #ffff00;
+  font-size: 40px;
+}
+
+.grid-container > .keys > .operator:hover:active {
+  color: #ffff00;
+  font-size: 36px;
+}
+
+
+.grid-container > .keys > .ope {
+  background: linear-gradient(90deg, rgb(166, 168, 5), rgb(88, 86, 2));
+  color: white;
+  border-top-left-radius: 20px;
+  font-size: 55px;
+}
+
+.grid-container > .keys > .ope:hover:active {
+  margin: 3px;
+  border-radius: 20px 0 0 0;
+  background: linear-gradient(90deg, rgb(166, 168, 5), rgb(88, 86, 2));
+  color: white;
+}
+
+.ope {
+  grid-row: span 2;
+}
+  
+.grid-container > .output {
+  grid-column: 1 / -1;
+  background: linear-gradient(to right, rgb(92, 92, 90), rgb(5, 22, 20));
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 40px 18px 0;
+  word-wrap: break-word;
+  word-break: break-all;
+ }
+  
+.grid-container > .output > .previous-operand {
+  color: white;
+  letter-spacing: -5px;
+  margin: 0 15px 0 0;
+  font-size: 3rem;
+}
+  
+.grid-container > .output > .current-operand {
+  color: white;
+  font-size: 3rem;
+}
